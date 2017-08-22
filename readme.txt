@@ -11,5 +11,4 @@
 开发人员：
 宋朝辉 
 优选广告汽车部 
-TEL：18288240129
 Email：chaohuisong@qq.com
