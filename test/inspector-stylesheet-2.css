@@ -1,0 +1,44 @@
+.ui-widget.ui-widget-content {
+    width: 230px;
+    background: #ececec;
+}
+
+div#globalLeftNavBox {
+    font-size: 1.4em;
+}
+
+#globalLeftNav h3 {
+    color: #696969;
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 5px;
+    border-bottom: 1px solid #696969;
+}
+
+.other-enter-box {
+    width: 220px;
+    margin-left: 5px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+}
+
+.enter {
+    height: 30px;
+    line-height: 30px;
+}
+
+.other-info {
+    width: 220px;
+    margin-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.other-info p {
+    height: 30px;
+    line-height: 30px;
+}

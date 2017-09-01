@@ -1,0 +1,74 @@
+div#navSheetWrapper {
+    max-width: 1000px;
+    font-size: 1.4em;
+    position: absolute;
+    width: auto;
+    background-color: #efefef;
+    left: 265px;
+    box-shadow: 0px 0px 30px #555555;
+}
+
+.nav-inner-wrapper.adPrice {
+    display: none;
+}
+
+.nav-inner-wrapper:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+div#globalLeftNav {
+    display: none;
+}
+
+.nav-inner-wrapper.adSourceWrapper {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    background-color: #efefef;
+}
+
+.wrapper-list {
+    width: 150px;
+    float: left;
+    /* display: inline-block; */
+    margin: 20px;
+}
+
+ul.media-list {
+    list-style: none;
+}
+
+.nav-inner-wrapper:after {
+    /* content: ''; */
+    display: block;
+    clear: both;
+}
+
+.nav-inner-wrapper:before {
+    content: '^';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    top: -16px;
+    left: 45px;
+    background: #efefef;
+}
+
+h3 {
+    width: 100%;
+    font-size: 1.2em;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #dedede;
+}
+
+li {
+    height: 30px;
+    line-height: 30px;
+}
+

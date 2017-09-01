@@ -1,0 +1,89 @@
+ul.media-source {
+    width: 300px;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 300px;
+    background-color: #dedede;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.media-source h3 {
+    border-bottom: 1px solid #949494;
+    width: 80%;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.media-source li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.media-source li:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background: url("../src/icon/shopping.png");
+}
+
+section.available-ad-source{
+    background: url("../src/img/bg_img_color1.jpg") top center no-repeat;
+    background-size: cover;
+}
+
+#ad-overage-rate{
+    width: 100%;
+    background-color: #efefef;
+    height: 300px;
+    font-size: 1.6em;
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+#ad-overage-rate h2{
+    width:100%;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+footer#footer {
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1200px;
+    height: 60px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.yx-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.copyright {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-content {
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+}
+
+i.yx-logo-icon {
+    display: inline-block;
+    width: 135px;
+    height: 40px;
+    background-image: url("../src/icon/yxlogo.png");
+    text-indent: -100000px;
+    vertical-align: middle;
+}

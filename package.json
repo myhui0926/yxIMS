@@ -1,0 +1,40 @@
+{
+  "name": "yimsys",
+  "version": "1.0.0",
+  "description": "Youxuan Inventory Management System",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myhui0926/yxIMS.git"
+  },
+  "keywords": [
+    "优选广告资源库存管理系统"
+  ],
+  "author": "宋朝辉",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myhui0926/yxIMS/issues"
+  },
+  "homepage": "https://github.com/myhui0926/yxIMS#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-css-spriter": "^0.4.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-useref": "^3.1.2"
+  },
+  "dependencies": {}
+}
