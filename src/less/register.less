@@ -1,0 +1,190 @@
+*{margin:0;padding:0;}
+html{font-size: 62.5%;
+  font-family: "Microsoft YaHei UI","Microsoft YaHei UI Light";
+}
+body{font-size: 1em;width: 100%;  background-color: #efefef;}
+h1{display: none;}
+a{
+  &:link{text-decoration: none;}
+  &:visited{text-decoration: none;}
+  &:hover{text-decoration: none;}
+  &:active{text-decoration: none;}}
+@icon-path:'../icon/';
+@color-1:#efefef;
+@color-2:#dedede;
+@gray-3:#b9b9b9;
+@color-3:#00a8ff;
+@color-yxred:#e60012;
+@color-ui-darker-blue:#003eff;
+@color-ui-lighter-blue:#007fff;
+div.register-box{
+  width: 100%;
+  height: auto;
+  max-width: 1920px;
+  min-width: 1200px;
+  margin:0 auto;
+}
+.register-header{
+  font-size: 2.4em;
+  width: 100%;
+  height: 65px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+  .rh-logo{
+    width: 135px;
+    height: 100%;
+    display: inline-block;
+    line-height: 65px;
+    margin-right: 10px;
+    i{
+      width: 100%;
+      height: 40px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url("../icon/yxlogo.png");
+      text-indent: -10000px;
+    }
+  }
+  .rh-sysName{
+    display: inline-block;
+    width: 250px;
+    height: 100%;
+    line-height: 65px;
+  }
+}
+
+.regist{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.6em;
+  margin-top: 10px;
+  margin-bottom: 58px;
+  a{
+    color: @color-3;
+  }
+}
+
+.register-content{
+  font-size: 1.6em;
+  width: 1200px;
+  height: 650px;
+  background-color: #ffffff;
+  margin:0 auto;
+  padding-top: 30px;
+  .reg-title{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid @gray-3;
+    position: relative;
+    h2{
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      .rt-icon{
+        margin-right: 15px;
+      }
+    }
+    a{
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      color: @color-3;
+    }
+  }
+}
+
+#register-form{
+  width:374px;
+  margin:0 auto;
+  .input-line{
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    border-color: @color-2;
+    input{
+      font-size: 1em;
+      width: 374px;
+      height: 40px;
+      padding-left: 2px;
+    }
+    .check-box{
+      font-size: 0.8em;
+      width: 332px;
+      height: 40px;
+      line-height: 40px;
+      position: absolute;
+      left: 385px;
+      top:0;
+      .check-icon{
+        display: none;
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        vertical-align: middle;
+        &.check-icon-pass{
+          display: inline-block;
+          background: url("../icon/check-pass.png");
+        }
+        &.check-icon-error{
+          display: inline-block;
+          background: url("../icon/check-wrong.png");
+        }
+      }
+      .check-text{
+        width: 310px;
+        height: 40px;
+        line-height: 40px;
+        text-align: left;
+        color: #ff0000;
+        display: none;
+        vertical-align: middle;
+      }
+    }
+  }
+  #reg-radio-box{
+    width: 370px;
+    height: 66px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border:1px solid @gray-3;
+  }
+}
+
+footer#footer {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1200px;
+  height: 60px;
+  background-color: #000000;
+  color: #ffffff;
+  .footer-content {
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    .yx-logo {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+      i.yx-logo-icon {
+        display: inline-block;
+        width: 135px;
+        height: 40px;
+        background-image: url("../icon/yxlogo.png");
+        text-indent: -100000px;
+        vertical-align: middle;
+      }
+    }
+    .copyright {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

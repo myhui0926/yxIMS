@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>媒介广告位管理</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="keywords" content="广告资源库存管理系统,云南优选广告,云围城,腾讯房产,腾讯汽车,网易云南,云南电台广告,昆明市内LED大屏,大屏网">
+        <meta name="description" content="提供广告资源库存管理功能，能够实时查询各类广告位的库存情况，方便媒介部门管理单据，便于AE能够准确的告知客户各类广告资源的库存使用情况，为客户指定合适的投放计划提供便利。">
+        <title>广告资源库存管理系统</title>
+        <!-- build:css css/main_layout.min.css -->
+        <link rel="stylesheet" type="text/css" href="css/main_layout.css">
+        <!-- endbuild -->
+        <!-- build:css css/media_screen.min.css -->
+        <link rel="stylesheet" type="text/css" href="css/media_screen.css">
+        <!-- endbuild -->
+        <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
+        <script src="../lib/jquery-3.2.1.min.js"></script>
+        <script src="../lib/jquery-ui/jquery-ui.js"></script>
+        <script src="js/navigationBar_ctrl.js"></script>
+    </head>
+</head>
+<body>
+<h1>广告资源库存管理系统</h1>
+<header id="header">
+    <nav id="navigationBar" class="c-nav">
+        <!-- 顶部横向菜单Start-->
+        <div class="c-nav-inner">
+            <a href="javascript:;" id="leftNavSwitcher" class="c-nav-trigger">
+                <i class="c-nav-trigger-icon"></i>
+            </a>
+            <div class="c-nav-logo">
+                <i class="c-logo-icon" alt="云南优选广告">云南优选广告</i>
+            </div>
+            <ul id="topNav" class="c-navTop-list">
+                <li data-menuname="adSource">查看库存</li>
+                <li data-menuname="adPrice">广告刊例</li>
+                <li data-menuname="paperManage">单据管理</li>
+                <li>业务员入口</li>
+                <li>媒介入口</li>
+                <li>问题反馈</li>
+            </ul>
+            <div class="tool-right">
+                <div class="c-sysName"><strong>广告资源库存管理系统</strong></div>
+                <div id="siteTools" class="c-nav-tools">
+                    <a href="login.html" id="serviceLogin">登录</a>
+                    <span>|</span>
+                    <a href="login.html" id="serviceRegister">注册</a>
+                    <span>|</span>
+                    <a href="#" id="serviceMessage">消息通知</a>
+                </div>
+            </div>
+        </div>
+        <!-- 顶部横向菜单End-->
+
+        <!-- 顶部二级菜单浮层START -->
+        <div id="navSheetWrapper" class="c-nav-wrapper">
+            <div class="nav-inner-wrapper paperManage">
+                <div class="wrapper-list">
+                    <ul class="media-list">
+                        <li><a href="#">单据录入</a></li>
+                    </ul>
+                </div>
+                <div class="wrapper-list">
+                    <ul class="media-list">
+                        <li><a href="#">查看单据</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 其他子浮层由js生成 -->
+        </div>
+        <!-- 顶部二级菜单浮层END -->
+
+        <!-- 侧边栏全站功能导航START -->
+        <div id="globalLeftNavBox"></div>
+    </nav>
+</header>
+</body>
+</html>

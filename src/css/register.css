@@ -1,0 +1,233 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light";
+}
+
+body {
+	font-size: 1em;
+	width: 100%;
+	background-color: #efefef;
+}
+
+h1 {
+	display: none;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+div.register-box {
+	width: 100%;
+	height: auto;
+	max-width: 1920px;
+	min-width: 1200px;
+	margin: 0 auto;
+}
+
+.register-header {
+	font-size: 2.4em;
+	width: 100%;
+	height: 65px;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.register-header .rh-logo {
+	width: 135px;
+	height: 100%;
+	display: inline-block;
+	line-height: 65px;
+	margin-right: 10px;
+}
+
+.register-header .rh-logo i {
+	width: 100%;
+	height: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url("../img/spriteSheet.png");
+	background-position: -0px -0px;
+	text-indent: -10000px;
+}
+
+.register-header .rh-sysName {
+	display: inline-block;
+	width: 250px;
+	height: 100%;
+	line-height: 65px;
+}
+
+.regist {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 1.6em;
+	margin-top: 10px;
+	margin-bottom: 58px;
+}
+
+.regist a {
+	color: #00a8ff;
+}
+
+.register-content {
+	font-size: 1.6em;
+	width: 1200px;
+	height: 650px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.register-content .reg-title {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #b9b9b9;
+	position: relative;
+}
+
+.register-content .reg-title h2 {
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+}
+
+.register-content .reg-title h2 .rt-icon {
+	margin-right: 15px;
+}
+
+.register-content .reg-title a {
+	display: inline-block;
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	color: #00a8ff;
+}
+
+#register-form {
+	width: 374px;
+	margin: 0 auto;
+}
+
+#register-form .input-line {
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px;
+	border-color: #dedede;
+}
+
+#register-form .input-line input {
+	font-size: 1em;
+	width: 374px;
+	height: 40px;
+	padding-left: 2px;
+}
+
+#register-form .input-line .check-box {
+	font-size: 0.8em;
+	width: 332px;
+	height: 40px;
+	line-height: 40px;
+	position: absolute;
+	left: 385px;
+	top: 0;
+}
+
+#register-form .input-line .check-box .check-icon {
+	display: none;
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+	vertical-align: middle;
+}
+
+#register-form .input-line .check-box .check-icon.check-icon-pass {
+	display: inline-block;
+	background: url("../img/spriteSheet.png");
+	background-position: -135px -81px;
+}
+
+#register-form .input-line .check-box .check-icon.check-icon-error {
+	display: inline-block;
+	background: url("../img/spriteSheet.png");
+	background-position: -112px -40px;
+}
+
+#register-form .input-line .check-box .check-text {
+	width: 310px;
+	height: 40px;
+	line-height: 40px;
+	text-align: left;
+	color: #ff0000;
+	display: none;
+	vertical-align: middle;
+}
+
+#register-form #reg-radio-box {
+	width: 370px;
+	height: 66px;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #b9b9b9;
+}
+
+footer#footer {
+	width: 100%;
+	max-width: 1920px;
+	min-width: 1200px;
+	height: 60px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+footer#footer .footer-content {
+	width: 1200px;
+	margin: 0 auto;
+	height: 60px;
+	line-height: 60px;
+}
+
+footer#footer .footer-content .yx-logo {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+footer#footer .footer-content .yx-logo i.yx-logo-icon {
+	display: inline-block;
+	width: 135px;
+	height: 40px;
+	background-image: url("../img/spriteSheet.png");
+	background-position: -0px -0px;
+	text-indent: -100000px;
+	vertical-align: middle;
+}
+
+footer#footer .footer-content .copyright {
+	display: inline-block;
+	vertical-align: middle;
+}
+/*# sourceMappingURL=../maps/register.css.map */

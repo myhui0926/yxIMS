@@ -1,12 +1,17 @@
 ul.media-source {
-    width: 300px;
+    width: 348px;
     list-style: none;
     display: inline-block;
     vertical-align: top;
-    min-height: 300px;
+    height: 300px;
+    overflow-y: scroll;
     background-color: #dedede;
     padding: 10px;
     margin-right: 20px;
+}
+
+ul.media-source:last-child{
+    margin-right: 0;
 }
 
 .media-source h3 {
@@ -29,11 +34,6 @@ ul.media-source {
     height: 15px;
     margin-right: 5px;
     background: url("../src/icon/shopping.png");
-}
-
-section.available-ad-source{
-    background: url("../src/img/bg_img_color1.jpg") top center no-repeat;
-    background-size: cover;
 }
 
 #ad-overage-rate{

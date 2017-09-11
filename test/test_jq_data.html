@@ -19,12 +19,21 @@
 </style>
 <div class="test" data-testd="song">123</div>
 <script>
-    $('.test').mouseover(function(){
-        $(this).addClass('tran');
-    });
-    $('.test').mouseout(function(){
-        $(this).removeClass('tran');
-    });
+    var ao = {
+        text: "hahaha",
+        abc: function(a,b){
+            console.log(a+b);
+            return a+b;
+    },
+        rel: function(){
+            this.a = this.abc(1,2);
+            console.log('ok!');
+            return this .a;
+        }
+    }
+
+    console.log(ao.rel());
+    console.log(ao.a);
 </script>
 </body>
 </html>
