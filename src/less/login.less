@@ -50,20 +50,7 @@ div.register-box{
     display: inline-block;
     width: 250px;
     height: 100%;
-    line-height: 60px;
-  }
-}
-
-.regist{
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 1.6em;
-  margin-top: 10px;
-  margin-bottom: 58px;
-  a{
-    color: @color-3;
+    line-height: 65px;
   }
 }
 
@@ -78,7 +65,7 @@ div.register-box{
     width: 100%;
     height: 40px;
     line-height: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border-bottom: 1px solid @gray-3;
     position: relative;
     h2{
@@ -99,32 +86,41 @@ div.register-box{
   }
 }
 
-#register-form{
-  width:374px;
-  margin:0 auto;
-  .input-line{
-    width: 100%;
-    position: relative;
-    margin-bottom: 20px;
-    border-color: @color-2;
-    input{
-      font-size: 1em;
-      width: 374px;
-      height: 40px;
-      padding-left: 2px;
-    }
-  }
-  .form-field{
-    width: 370px;
-    height: 66px;
-    padding-top: 10px;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    border:1px solid @gray-3;
+.regist{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.6em;
+  margin-top: 10px;
+  margin-bottom: 58px;
+  a{
+    color: @color-3;
   }
 }
 
-.input-line,#user_depart_field{
+#login-tabs{
+  width: 90%;
+  margin:0 auto;
+  .login-form{
+    width:374px;
+    margin:0 auto;
+    .input-line{
+      width: 100%;
+      position: relative;
+      margin-bottom: 20px;
+      border-color: @color-2;
+      input{
+        font-size: 1em;
+        width: 374px;
+        height: 40px;
+        padding-left: 2px;
+      }
+    }
+  }
+}
+
+.input-line{
   .check-box{
     font-size: 0.8em;
     width: 332px;
@@ -161,49 +157,8 @@ div.register-box{
   }
 }
 
-#user_depart_field{
-  position: relative;
-  select.waiting_select{
-    display: none;
-  }
-  .ui-selectmenu-button.ui-button{
-    width: 100px;
-    &:first-child{
-      width: 120px;
-    }
-    &:last-child{
-      width: 180px;}
-  }
-
-}
-
-#dialog-confirm{
-  display: none;
-}
-
 #submitted_dialog{
   display: none;
-}
-
-#msg_confirm{
-  margin-top: 10px;
-  span{
-    display: inline-block;
-    padding-right: 10px;
-    padding-left: 10px;
-    height: 18px;
-    line-height: 18px;
-    border-right:1px solid @gray-3;
-    &:first-child{
-      padding-left: 0;
-    }
-    &:last-child{
-      border-right: none;
-    }
-  }
-}
-
-.ui-widget.ui-widget-content{
   font-size: 1.6em;
 }
 
@@ -212,6 +167,9 @@ footer#footer {
   max-width: 1920px;
   min-width: 1200px;
   height: 60px;
+  position: absolute;
+  bottom:0;
+  left:0;
   background-color: #000000;
   color: #ffffff;
   .footer-content {

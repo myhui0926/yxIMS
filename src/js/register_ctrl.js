@@ -1,7 +1,16 @@
 $(function(){
+    //先检查是否已经登录：
+    var thisCCer = new cookieChecker(checkIfLogin);
+    thisCCer.checkValid();
+    function checkIfLogin(resData){
+        if(resData.loStatus) {//如果确认用户已经登陆：
+            window.location.href='_index.html';
+        }
+    }
     //默认状态禁用提交按钮
   $('#reg-radio-box input').checkboxradio();
-    $( ".input-line input[type=submit]").button({
+
+  $( ".input-line input[type=submit]").button({
         disabled:true
     });
 
@@ -182,6 +191,7 @@ $(function(){
 
                 $('#msg_confirm').html(msg_entered);
                 var formData = $(this).serialize();
+                console.log(formData);
                 $( "#dialog-confirm" ).dialog({
                     resizable: false,
                     height: "auto",
@@ -189,9 +199,6 @@ $(function(){
                     modal: true,
                     buttons: {
                         "确认提交": function() {
-                            $('#submitted_dialog').ajaxStart(function(){
-                                console.log('start');
-                            });
                             $.ajax({
                                 type:'POST',
                                 url:'http://localhost/yxIMS_PHP_API/user_register_login/user_register.php',
@@ -212,14 +219,11 @@ $(function(){
                                                 }
                                             }
                                         });
-                                        $('#reg-submit-btn').button('option','disabled',true);
-
                                     }else{
                                         var html = '';
                                         $.each(responseData.errorMsg,function(index,item){
                                             html+='<p>'+item+'</p>';
                                         });
-                                        console.log(html);
                                         $('#submitted_dialog').html(html);
                                         $('#submitted_dialog').dialog({
                                             modal:true,

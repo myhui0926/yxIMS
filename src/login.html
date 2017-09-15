@@ -8,16 +8,129 @@
     <meta name="description" content="提供广告资源库存管理功能，能够实时查询各类广告位的库存情况，方便媒介部门管理单据，便于AE能够准确的告知客户各类广告资源的库存使用情况，为客户指定合适的投放计划提供便利。">
     <title>登录</title>
     <!-- build:css css/main_layout.min.css -->
-    <link rel="stylesheet" type="text/css" href="css/main_layout.css">
-    <!-- endbuild -->
-    <!-- build:css css/media_screen.min.css -->
-    <link rel="stylesheet" type="text/css" href="css/media_screen.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <!-- endbuild -->
     <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
     <script src="../lib/jquery-3.2.1.min.js"></script>
     <script src="../lib/jquery-ui/jquery-ui.js"></script>
+    <script src="js/cookieCheck.js"></script>
+    <script src="js/login_ctrl.js"></script>
 </head>
 <body>
+<div class="register-box" id="registerBox">
+    <div class="register-header">
+        <div class="rh-logo">
+            <i class="rh-icon">云南优选广告</i>
+        </div>
+        <div class="rh-sysName"><strong>广告资源库存管理系统</strong></div>
+    </div>
+    <div class="register-content">
+        <div class="reg-title">
+            <h2><span class="ui-icon ui-icon-pencil rt-icon"></span>请输入您的个人信息进行登录</h2>
+            <a href="register.html">没有账号,请先注册>>></a>
+        </div>
 
+        <div id="login-tabs">
+            <ul>
+                <li><a href="#tabs-1">工号登录</a></li>
+                <li><a href="#tabs-2">手机号码登录</a></li>
+                <li><a href="#tabs-3">邮箱登录</a></li>
+            </ul>
+            <div id="tabs-1">
+                <form class="login-form" id="login_job_num" action="http://localhost/yxIMS_PHP_API/user_register_login/user_login.php" method="post">
+                    <input type="hidden" name="login_type" value="job_num">
+                    <div class="input-line">
+                        <input name="job_number" placeholder="输入工号(三位数字)">
+                        <div id="jn-check" class="check-box">
+                            <span class="check-icon"></span><span
+                                class="check-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-line">
+                        <input type="password" name="user_pass" placeholder="请输入密码">
+                        <div class="check-box up-check">
+                            <span class="check-icon"></span><span
+                                class="check-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-line">
+                        <input type="submit" value="登录">
+                    </div>
+                </form>
+            </div>
+
+            <div id="tabs-2">
+                <form class="login-form" id="login_mobile" action="http://localhost/yxIMS_PHP_API/user_register_login/user_login.php" method="post">
+                    <input type="hidden" name="login_type" value="mobile">
+                    <div class="input-line">
+                        <input type="tel" name="user_mobile" placeholder="请输入手机号码">
+                        <div id="um-check" class="check-box">
+                            <span class="check-icon"></span><span
+                                class="check-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-line">
+                        <input type="password" name="user_pass" placeholder="请输入密码">
+                        <div class="check-box up-check">
+                            <span class="check-icon"></span><span
+                                class="check-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-line">
+                        <input type="submit" value="登录">
+                    </div>
+                </form>
+            </div>
+
+            <div id="tabs-3">
+                <form class="login-form" id="login_email" action="http://localhost/yxIMS_PHP_API/user_register_login/user_login.php" method="post">
+                    <input type="hidden" name="login_type" value="email">
+
+                    <div class="input-line">
+                        <input type="email" name="user_email" placeholder="请输入你的邮箱">
+                        <div id="ue-check" class="check-box">
+                            <span class="check-icon"></span><span
+                                class="check-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-line">
+                        <input type="password" name="user_pass" placeholder="请输入密码">
+                        <div class="check-box up-check">
+                            <span class="check-icon"></span><span
+                                class="check-text"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-line">
+                        <input type="submit" value="登录">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="regist">
+        <p>还没有账号？<a href="register.html">请先注册</a></p>
+    </div>
+</div>
+
+<div id="submitted_dialog" title="服务器消息"></div>
+
+<footer id="footer" class="site-footer">
+    <div class="footer-content">
+        <div class="yx-logo">
+            <i class="yx-logo-icon">云南优选广告</i>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2016-2017 BEST CHOICE AD. All Rights Reserved. <span>云南优选广告&nbsp;版权所有</span>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

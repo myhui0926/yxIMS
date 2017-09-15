@@ -121,7 +121,32 @@ ul.c-navTop-list{
     display: table-cell;
     width: 5px;
     height: 32px;
-    vertical-align: middle;}}
+    vertical-align: middle;}
+  #loginControl{
+    height: 32px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #userCenter{
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    top: 6px;
+    a{
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+    }
+    a#userHeadPortrait{
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      border:1px solid @color-2;
+      border-radius: 50%;
+      background-size: 100%;
+    }
+  }
+}
 /******头部导航栏、工具栏区域END******/
 
 /******头部导航栏浮层START******/
@@ -260,6 +285,9 @@ ul.c-navTop-list{
     left:0;
   }
 }
+.ui-menu .ui-menu-item-wrapper{
+  padding:10px 10px 10px 30px !important;
+}
 /******左侧全站导航-分级菜单END******/
 
 /******全站通知START******/
@@ -382,6 +410,12 @@ section.available-ad-source{
 }
 /******可用资源列表END*****/
 
+/*****服务器消息START*****/
+#submitted_dialog{
+  display: none;
+  font-size: 1.6em;
+}
+/*****服务器消息END*****/
 
 /****** @media screen START *************/
 //@import "media_screen";

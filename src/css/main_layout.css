@@ -201,6 +201,34 @@ ul.c-navTop-list:after {
 	vertical-align: middle;
 }
 
+#siteTools #loginControl {
+	height: 32px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#siteTools #userCenter {
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	top: 6px;
+}
+
+#siteTools #userCenter a {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+}
+
+#siteTools #userCenter a#userHeadPortrait {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	border: 1px solid #dedede;
+	border-radius: 50%;
+	background-size: 100%;
+}
+
 /******头部导航栏、工具栏区域END******/
 
 /******头部导航栏浮层START******/
@@ -258,7 +286,7 @@ ul.c-navTop-list:after {
 	position: absolute;
 	top: -16px;
 	background: url("../img/spriteSheet.png") no-repeat;
-	background-position: -135px -65px;
+	background-position: -112px -40px;
 }
 
 .nav-inner-wrapper:after {
@@ -347,6 +375,10 @@ ul.c-navTop-list:after {
 
 #globalLeftNavBox.slideOut {
 	left: 0;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+	padding: 10px 10px 10px 30px !important;
 }
 
 /******左侧全站导航-分级菜单END******/
@@ -496,6 +528,15 @@ section.available-ad-source .c-source-tabs {
 }
 
 /******可用资源列表END*****/
+
+/*****服务器消息START*****/
+
+#submitted_dialog {
+	display: none;
+	font-size: 1.6em;
+}
+
+/*****服务器消息END*****/
 
 /****** @media screen START *************/
 

@@ -73,21 +73,7 @@ div.register-box {
 	display: inline-block;
 	width: 250px;
 	height: 100%;
-	line-height: 60px;
-}
-
-.regist {
-	width: 100%;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	font-size: 1.6em;
-	margin-top: 10px;
-	margin-bottom: 58px;
-}
-
-.regist a {
-	color: #00a8ff;
+	line-height: 65px;
 }
 
 .register-content {
@@ -103,7 +89,7 @@ div.register-box {
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	border-bottom: 1px solid #b9b9b9;
 	position: relative;
 }
@@ -126,36 +112,45 @@ div.register-box {
 	color: #00a8ff;
 }
 
-#register-form {
+.regist {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 1.6em;
+	margin-top: 10px;
+	margin-bottom: 58px;
+}
+
+.regist a {
+	color: #00a8ff;
+}
+
+#login-tabs {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#login-tabs .login-form {
 	width: 374px;
 	margin: 0 auto;
 }
 
-#register-form .input-line {
+#login-tabs .login-form .input-line {
 	width: 100%;
 	position: relative;
 	margin-bottom: 20px;
 	border-color: #dedede;
 }
 
-#register-form .input-line input {
+#login-tabs .login-form .input-line input {
 	font-size: 1em;
 	width: 374px;
 	height: 40px;
 	padding-left: 2px;
 }
 
-#register-form .form-field {
-	width: 370px;
-	height: 66px;
-	padding-top: 10px;
-	padding-left: 10px;
-	margin-bottom: 20px;
-	border: 1px solid #b9b9b9;
-}
-
-.input-line .check-box,
-#user_depart_field .check-box {
+.input-line .check-box {
 	font-size: 0.8em;
 	width: 332px;
 	height: 40px;
@@ -166,8 +161,7 @@ div.register-box {
 	margin-top: -22px;
 }
 
-.input-line .check-box .check-icon,
-#user_depart_field .check-box .check-icon {
+.input-line .check-box .check-icon {
 	display: none;
 	width: 16px;
 	height: 16px;
@@ -175,22 +169,19 @@ div.register-box {
 	vertical-align: middle;
 }
 
-.input-line .check-box .check-icon.check-icon-pass,
-#user_depart_field .check-box .check-icon.check-icon-pass {
+.input-line .check-box .check-icon.check-icon-pass {
 	display: inline-block;
 	background: url("../img/spriteSheet.png");
 	background-position: -135px -65px;
 }
 
-.input-line .check-box .check-icon.check-icon-error,
-#user_depart_field .check-box .check-icon.check-icon-error {
+.input-line .check-box .check-icon.check-icon-error {
 	display: inline-block;
 	background: url("../img/spriteSheet.png");
 	background-position: -135px -81px;
 }
 
-.input-line .check-box .check-text,
-#user_depart_field .check-box .check-text {
+.input-line .check-box .check-text {
 	width: 310px;
 	height: 40px;
 	line-height: 40px;
@@ -200,56 +191,8 @@ div.register-box {
 	vertical-align: middle;
 }
 
-#user_depart_field {
-	position: relative;
-}
-
-#user_depart_field select.waiting_select {
-	display: none;
-}
-
-#user_depart_field .ui-selectmenu-button.ui-button {
-	width: 100px;
-}
-
-#user_depart_field .ui-selectmenu-button.ui-button:first-child {
-	width: 120px;
-}
-
-#user_depart_field .ui-selectmenu-button.ui-button:last-child {
-	width: 180px;
-}
-
-#dialog-confirm {
-	display: none;
-}
-
 #submitted_dialog {
 	display: none;
-}
-
-#msg_confirm {
-	margin-top: 10px;
-}
-
-#msg_confirm span {
-	display: inline-block;
-	padding-right: 10px;
-	padding-left: 10px;
-	height: 18px;
-	line-height: 18px;
-	border-right: 1px solid #b9b9b9;
-}
-
-#msg_confirm span:first-child {
-	padding-left: 0;
-}
-
-#msg_confirm span:last-child {
-	border-right: none;
-}
-
-.ui-widget.ui-widget-content {
 	font-size: 1.6em;
 }
 
@@ -258,6 +201,9 @@ footer#footer {
 	max-width: 1920px;
 	min-width: 1200px;
 	height: 60px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	background-color: #000000;
 	color: #ffffff;
 }
@@ -289,4 +235,4 @@ footer#footer .footer-content .copyright {
 	display: inline-block;
 	vertical-align: middle;
 }
-/*# sourceMappingURL=../maps/register.css.map */
+/*# sourceMappingURL=../maps/login.css.map */
