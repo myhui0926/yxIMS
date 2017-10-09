@@ -1,0 +1,190 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light";
+}
+
+body {
+	font-size: 1em;
+	width: 100%;
+}
+
+h1 {
+	display: none;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+/******全站通知START******/
+
+.site-notice-box {
+	width: 100%;
+	position: relative;
+	max-width: 1920px;
+	min-width: 1200px;
+	background-color: #00a8ff;
+	min-height: 300px;
+	color: #ffffff;
+	font-size: 1.6em;
+	z-index: 0;
+}
+
+.site-notice-box .site-notice {
+	width: 1000px;
+	overflow-x: hidden;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+.site-notice-box .site-notice .site-notice-group {
+	width: 500%;
+	position: relative;
+	z-index: 1;
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	-webkit-transition: -webkit-transform 0.5s linear;
+	transition: -webkit-transform 0.5s linear;
+	transition: transform 0.5s linear;
+	transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+
+.site-notice-box .site-notice .notice-inner {
+	float: left;
+	width: 1000px;
+}
+
+.site-notice-box .site-notice .notice-inner h2 {
+	max-width: 800px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 3em;
+	border-bottom: 1px solid #ffffff;
+}
+
+.site-notice-box .site-notice .notice-inner p {
+	line-height: 1.8em;
+}
+
+.site-notice-box .site-notice .notice-inner a {
+	color: #ffffff;
+	display: block;
+	width: 100px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 20px;
+	border: 1px solid #ffffff;
+}
+
+.site-notice-box .site-notice .notice-inner a:hover {
+	background-color: #ffffff;
+	color: #00a8ff;
+}
+
+.site-notice-box .summary-flag {
+	width: 200px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	text-align: center;
+	bottom: 10px;
+}
+
+.site-notice-box .summary-flag span {
+	display: inline-block;
+	width: 15px;
+	margin-right: 5px;
+	height: 5px;
+	border: 1px solid #ffffff;
+	cursor: pointer;
+}
+
+.site-notice-box .summary-flag span.sf-active {
+	background-color: #ffffff;
+}
+
+.site-notice-box .control-arrow {
+	z-index: 0;
+	width: 100%;
+	max-width: 1200px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	left: 50%;
+	margin-left: -600px;
+}
+
+.site-notice-box .control-arrow a {
+	display: inline-block;
+	width: 40px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.site-notice-box .control-arrow a#left-arrow {
+	float: left;
+	background-image: url("../img/spriteSheet.png");
+	background-position: -0px -40px;
+}
+
+.site-notice-box .control-arrow a#right-arrow {
+	float: right;
+	background-image: url("../img/spriteSheet.png");
+	background-position: -40px -40px;
+}
+
+/******全站通知END******/
+
+/******可用资源列表START*****/
+
+section.available-ad-source {
+	width: 100%;
+	max-width: 1920px;
+	min-width: 1200px;
+	font-size: 1.6em;
+	padding-top: 40px;
+}
+
+section.available-ad-source h2 {
+	width: 100%;
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 10px;
+}
+
+section.available-ad-source .c-source-tabs {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/******可用资源列表END*****/
+
+/*****服务器消息START*****/
+
+#submitted_dialog {
+	display: none;
+	font-size: 1.6em;
+}
+
+/*****服务器消息END*****/
+/*# sourceMappingURL=../maps/homepage.css.map */

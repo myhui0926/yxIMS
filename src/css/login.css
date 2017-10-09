@@ -79,7 +79,7 @@ div.register-box {
 .register-content {
 	font-size: 1.6em;
 	width: 1200px;
-	height: 720px;
+	height: 450px;
 	background-color: #ffffff;
 	margin: 0 auto;
 	padding-top: 30px;
@@ -89,7 +89,7 @@ div.register-box {
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	border-bottom: 1px solid #b9b9b9;
 	position: relative;
 }
@@ -128,6 +128,7 @@ div.register-box {
 
 #login-tabs {
 	width: 90%;
+	height: 310px;
 	margin: 0 auto;
 }
 
@@ -148,6 +149,14 @@ div.register-box {
 	width: 374px;
 	height: 40px;
 	padding-left: 2px;
+}
+
+#login-tabs #resetAccount {
+	width: 380px;
+	height: 44px;
+	line-height: 44px;
+	margin: 0 auto;
+	position: relative;
 }
 
 .input-line .check-box {
@@ -194,45 +203,5 @@ div.register-box {
 #submitted_dialog {
 	display: none;
 	font-size: 1.6em;
-}
-
-footer#footer {
-	width: 100%;
-	max-width: 1920px;
-	min-width: 1200px;
-	height: 60px;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background-color: #000000;
-	color: #ffffff;
-}
-
-footer#footer .footer-content {
-	width: 1200px;
-	margin: 0 auto;
-	height: 60px;
-	line-height: 60px;
-}
-
-footer#footer .footer-content .yx-logo {
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 5px;
-}
-
-footer#footer .footer-content .yx-logo i.yx-logo-icon {
-	display: inline-block;
-	width: 135px;
-	height: 40px;
-	background-image: url("../img/spriteSheet.png");
-	background-position: -0px -0px;
-	text-indent: -100000px;
-	vertical-align: middle;
-}
-
-footer#footer .footer-content .copyright {
-	display: inline-block;
-	vertical-align: middle;
 }
 /*# sourceMappingURL=../maps/login.css.map */

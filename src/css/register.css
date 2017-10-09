@@ -252,41 +252,4 @@ div.register-box {
 .ui-widget.ui-widget-content {
 	font-size: 1.6em;
 }
-
-footer#footer {
-	width: 100%;
-	max-width: 1920px;
-	min-width: 1200px;
-	height: 60px;
-	background-color: #000000;
-	color: #ffffff;
-}
-
-footer#footer .footer-content {
-	width: 1200px;
-	margin: 0 auto;
-	height: 60px;
-	line-height: 60px;
-}
-
-footer#footer .footer-content .yx-logo {
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 5px;
-}
-
-footer#footer .footer-content .yx-logo i.yx-logo-icon {
-	display: inline-block;
-	width: 135px;
-	height: 40px;
-	background-image: url("../img/spriteSheet.png");
-	background-position: -0px -0px;
-	text-indent: -100000px;
-	vertical-align: middle;
-}
-
-footer#footer .footer-content .copyright {
-	display: inline-block;
-	vertical-align: middle;
-}
 /*# sourceMappingURL=../maps/register.css.map */
