@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>媒介广告位管理</title>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="renderer" content="webkit">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="keywords" content="广告资源库存管理系统,云南优选广告,云围城,腾讯房产,腾讯汽车,网易云南,云南电台广告,昆明市内LED大屏,大屏网">
-        <meta name="description" content="提供广告资源库存管理功能，能够实时查询各类广告位的库存情况，方便媒介部门管理单据，便于AE能够准确的告知客户各类广告资源的库存使用情况，为客户指定合适的投放计划提供便利。">
-        <title>广告资源库存管理系统</title>
-        <!-- build:css css/main_layout.min.css -->
-        <link rel="stylesheet" type="text/css" href="css/main_layout.css">
-        <!-- endbuild -->
-        <!-- build:css css/media_screen.min.css -->
-        <link rel="stylesheet" type="text/css" href="css/media_screen.css">
-        <!-- endbuild -->
-        <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
-        <script src="../lib/jquery-3.2.1.min.js"></script>
-        <script src="../lib/jquery-ui/jquery-ui.js"></script>
-        <script src="js/navigationBar_ctrl.js"></script>
-    </head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="广告资源库存管理系统,云南优选广告,云围城,腾讯房产,腾讯汽车,网易云南,云南电台广告,昆明市内LED大屏,大屏网">
+    <meta name="description" content="提供广告资源库存管理功能，能够实时查询各类广告位的库存情况，方便媒介部门管理单据，便于AE能够准确的告知客户各类广告资源的库存使用情况，为客户指定合适的投放计划提供便利。">
+    <title>媒介中心</title>
+    <link rel="stylesheet" href="../lib/jquery-ui/jquery-ui.min.css">
+    <!-- build:css css/site_navigator.min.css -->
+    <link rel="stylesheet" href="css/site_navigator.css">
+    <!-- endbuild -->
+    <!-- build:css css/media_manage.min.css -->
+    <link rel="stylesheet" href="css/media_manage.css">
+    <!-- endbuild -->
+    <script src="../lib/jquery-3.2.1.min.js"></script>
+    <script src="../lib/jquery-ui/jquery-ui.js"></script>
+    <script src="js/media_manage/media_manage_global.js"></script>
+    <script src="js/media_manage/media_manage_ctrl.js"></script>
+    <script src="js/media_manage/add_ads.js"></script>
+    <script src="js/media_manage/edit_platform.js"></script>
+    <script src="js/media_manage/edit_ads.js"></script>
 </head>
 <body>
 <h1>广告资源库存管理系统</h1>
@@ -32,24 +31,26 @@
                 <i class="c-nav-trigger-icon"></i>
             </a>
             <div class="c-nav-logo">
-                <i class="c-logo-icon" alt="云南优选广告">云南优选广告</i>
+                <a href="_index.html">
+                    <i class="c-logo-icon" alt="云南优选广告">云南优选广告</i>
+                </a>
             </div>
             <ul id="topNav" class="c-navTop-list">
                 <li data-menuname="adSource">查看库存</li>
-                <li data-menuname="adPrice">广告刊例</li>
-                <li data-menuname="paperManage">单据管理</li>
                 <li>业务员入口</li>
-                <li>媒介入口</li>
-                <li>问题反馈</li>
+                <li><a href="media_manage.html">媒介入口</a></li>
+                <li><a href="errorReport.html">问题反馈</a></li>
             </ul>
             <div class="tool-right">
                 <div class="c-sysName"><strong>广告资源库存管理系统</strong></div>
                 <div id="siteTools" class="c-nav-tools">
-                    <a href="login.html" id="serviceLogin">登录</a>
-                    <span>|</span>
-                    <a href="login.html" id="serviceRegister">注册</a>
-                    <span>|</span>
-                    <a href="#" id="serviceMessage">消息通知</a>
+                    <div id="loginControl" class="login-control">
+                        <a href="login.html" id="serviceLogin">登录</a>
+                        <span>|</span>
+                        <a href="register.html" id="serviceRegister">注册</a>
+                        <span>|</span>
+                        <a href="login.html" id="serviceMessage">个人中心</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,18 +58,6 @@
 
         <!-- 顶部二级菜单浮层START -->
         <div id="navSheetWrapper" class="c-nav-wrapper">
-            <div class="nav-inner-wrapper paperManage">
-                <div class="wrapper-list">
-                    <ul class="media-list">
-                        <li><a href="#">单据录入</a></li>
-                    </ul>
-                </div>
-                <div class="wrapper-list">
-                    <ul class="media-list">
-                        <li><a href="#">查看单据</a></li>
-                    </ul>
-                </div>
-            </div>
             <!-- 其他子浮层由js生成 -->
         </div>
         <!-- 顶部二级菜单浮层END -->
@@ -76,6 +65,234 @@
         <!-- 侧边栏全站功能导航START -->
         <div id="globalLeftNavBox"></div>
     </nav>
+    <script src="js/cookieCheck.js"></script>
+    <script src="js/user_service.js"></script>
+    <script src="js/navigationBar_ctrl.js"></script>
 </header>
+
+<section id="media_manage_content">
+    <h2>资源操作</h2>
+    <span class="dividing-line"></span>
+
+    <div class="manage-interface">
+        <h3>管理广告平台</h3>
+        <div class="accordion">
+            <h4>添加广告平台</h4>
+            <div>
+                <form id="add-platform" class="media_manage_form">
+                    <fieldset>
+                        <legend>录入广告平台信息</legend>
+                        <select id="source-type" class="select_menu" name="source_type">
+                            <option selected disabled>选择资源类型</option>
+                            <option value="1">户外媒体</option>
+                            <option value="2">电台媒体</option>
+                            <option value="3">网络媒体</option>
+                        </select>
+                        <div class="input-line">
+                            <label for="plat_name" class="input_name">平台名称</label><input
+                                id="plat_name" name="plat_name" placeholder="不超过20个字符">
+                        </div>
+                        <div class="input-line">
+                            <label for="other_info" class="input_name">备注信息</label><input
+                                id="other_info" name="other_info" placeholder="不超过20个字符（选填）">
+                        </div>
+                        <div class="input-line"><input
+                                type="submit" id="add-to-list" value="加入列表">
+                        </div>
+                    </fieldset>
+                </form>
+                <table width="100%" id="plat_list" class="c-plat-list" cellspacing="0" cellpadding="5">
+                    <caption>已添加的平台列表</caption>
+                    <col width="20%">
+                    <col width="30%">
+                    <col width="40%">
+                    <col width="10%">
+                    <thead>
+                    <tr>
+                        <th>资源类型</th>
+                        <th>平台名称</th>
+                        <th>备注信息</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="timing_msg" class="timing-msg">
+                        <td colspan="4">还没有平台加入列表</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="submit-box" id="plat_submit_btn">
+                    <button id="submit-platform-btn">保存</button>
+                </div>
+            </div>
+            <h4>编辑广告平台</h4>
+            <div>
+                <div class="select-plat-box">
+                    <select id="select-plat-type">
+                        <option selected disabled>请选择平台类型</option>
+                        <option value="1">户外媒体</option>
+                        <option value="2">电台媒体</option>
+                        <option value="3">网络媒体</option>
+                    </select>
+                </div>
+               <table id="edit-list" width="100%" class="c-plat-list" cellspacing="0" cellpadding="5">
+                    <caption>查询到的平台</caption>
+                   <col width="20%">
+                   <col width="20">
+                   <col width="20">
+                   <col width="20">
+                   <col width="20%">
+                   <thead>
+                   <tr>
+                       <th>平台编号</th>
+                       <th>平台类型</th>
+                       <th>平台名称</th>
+                       <th>备注信息</th>
+                       <th>操作</th>
+                   </tr>
+                   </thead>
+                   <tbody></tbody>
+               </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="manage-interface">
+        <h3>管理广告资源</h3>
+        <div class="accordion">
+            <h4>添加广告资源</h4>
+            <div>
+                <form id="add-ads" class="media_manage_form">
+                    <fieldset class="ads-fl">
+                        <legend>录入广告资源信息</legend>
+
+                        <div class="field-line">
+                            <select id="ads-source-type" class="select_menu" name="source_type">
+                                <option selected disabled>选择资源类型</option>
+                                <option value="1">户外媒体</option>
+                                <option value="2">电台媒体</option>
+                                <option value="3">网络媒体</option>
+                            </select>
+
+                            <select id="ads-platform" class="select_menu" name="ads_platform">
+                                <option selected disabled>选择广告平台</option>
+                            </select>
+
+                            <div class="input-line">
+                                <label for="ads_name" class="input_name">资源名称</label><input
+                                    id="ads_name" name="ads_name" placeholder="不超过20个字符">
+                            </div>
+
+                            <div class="input-line">
+                                <label for="ads_total" class="input_name">资源容量</label><input
+                                    id="ads_total" type="number" name="ads_total" placeholder="该位置同时可以展现的广告数量">
+                            </div>
+                        </div>
+
+                        <div class="field-line pos_adjust">
+                            <div class="input-line">
+                                <label for="ads_price" class="input_name">刊例价</label><input
+                                    id="ads_price" type="number" name="ads_price" placeholder="该资源刊例价格">
+                            </div>
+
+                            <select id="price_unit" class="select_menu" name="price_unit">
+                                <option selected disabled>价格单位</option>
+                                <option value="天">天</option>
+                                <option value="月">月</option>
+                                <option value="年">年</option>
+                            </select>
+
+                            <div class="input-line">
+                                <label for="ads_remark" class="input_name">备注信息</label><input
+                                    id="ads_remark" name="ads_remark" placeholder="输入备注信息（尺寸、规格等）">
+                            </div>
+                            <div class="input-line"><input
+                                    type="submit" id="add-ads-to-list" value="加入列表">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <table width="100%" id="ads_list" class="c-plat-list" cellspacing="0" cellpadding="5px">
+                    <caption>已添加的资源列表</caption>
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <thead>
+                    <tr>
+                        <th>资源类型</th>
+                        <th>平台名称</th>
+                        <th>资源名称</th>
+                        <th>资源容量</th>
+                        <th>刊例价格</th>
+                        <th>单位</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="ads-timing-msg" class="timing-msg">
+                        <td colspan="5">还没有资源加入列表</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="submit-box" id="ads-submit-box">
+                    <button id="submit-ads-btn">保存</button>
+                </div>
+            </div>
+            <h4>编辑广告资源</h4>
+            <div>
+                <div class="select-plat-box">
+                    <select id="ads-source-type-2" class="select_menu" name="source_type">
+                        <option selected disabled>选择资源类型</option>
+                        <option value="1">户外媒体</option>
+                        <option value="2">电台媒体</option>
+                        <option value="3">网络媒体</option>
+                    </select>
+
+                    <select id="ads-platform-2" class="select_menu" name="ads_platform">
+                        <option selected disabled>选择广告平台</option>
+                    </select>
+                </div>
+                <table id="edit-ads-list" width="100%" class="c-plat-list" cellspacing="0" cellpadding="5">
+                    <caption>查询到的广告资源</caption>
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col width="20%">
+                    <thead>
+                    <tr>
+                        <th>资源编号</th>
+                        <th>资源名称</th>
+                        <th>资源容量</th>
+                        <th>刊例价格</th>
+                        <th>价格单位</th>
+                        <th>备注信息</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div id="submitted_dialog" title="服务器消息"></div>
+
+<footer id="footer" class="site-footer">
+    <script>
+        $('#footer').load('./common/site_footer.html');
+    </script>>
+</footer>
 </body>
 </html>
