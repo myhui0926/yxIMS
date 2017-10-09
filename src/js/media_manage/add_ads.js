@@ -17,8 +17,6 @@ $(function(){
     });
     submitAdsBtn.click(function(){
         submitAds(submitDataSave);
-        //改变footer位置：
-        changePos();
     });
 
     //预设各表单值检查状态
@@ -172,14 +170,10 @@ $(function(){
         //更新提交按钮状态：
         submitAdsBtn.button('option','disabled',false);
 
-        //改变footer位置：
-        changePos();
-
     });
 
     //用于提交数据
     function submitAds(submitData){
-        console.log(JSON.stringify(submitData));
         $.ajax({
             url:ajaxHost+'yxIMS_PHP_API/source_manage/insert_ads.php',
             data:JSON.stringify(submitData),
