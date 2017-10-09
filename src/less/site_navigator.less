@@ -1,0 +1,354 @@
+*{margin:0;padding:0;}
+html{font-size: 62.5%;font-family: "Microsoft YaHei UI","Microsoft YaHei UI Light";}
+body{font-size: 1em;width: 100%;}
+h1{display: none;}
+a{
+  &:link{text-decoration: none;}
+  &:visited{text-decoration: none;}
+  &:hover{text-decoration: none;}
+  &:active{text-decoration: none;}}
+@icon-path:'../icon/';
+@color-1:#efefef;
+@color-2:#dedede;
+@color-3:#00a8ff;
+@color-yxred:#e60012;
+@color-ui-darker-blue:#003eff;
+@color-ui-lighter-blue:#007fff;
+/******头部导航栏、工具栏区域START******/
+.nav-top-child-box(@width,@mr,@have_i,@iw,@ih,@bg_file) when (@have_i){
+  width: @width;
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-right: @mr;
+  i{
+    display: inline-block;
+    vertical-align: middle;
+    width:@iw;
+    height: @ih;
+    text-indent: -10000px;
+    background:url("@{icon-path}@{bg_file}") no-repeat;
+  }}
+
+.nav-top-child-box(@width){
+  width: @width;
+  height: 100%;
+  display: inline-block;
+  text-align: center;}
+
+#header{width: 100%;max-width: 1920px;min-width: 1200px;}
+
+.c-nav{width: 100%;}
+.c-nav{
+  a{
+    &:link{
+      color: #000;}
+    &:visited{
+      color: #000;}
+    &:hover{
+      color: @color-3;}
+    &:active{
+      color: @color-3;}
+  }
+}
+
+.c-nav-inner{width: 100%;font-size: 1.6em;background-color: #000000;height: 65px;color: #ffffff;position: relative;}
+
+a.c-nav-trigger{.nav-top-child-box(80px,20px,true,32px,32px,'trigger_icon.png');}
+
+.c-nav-logo{.nav-top-child-box(145px,20px,true,135px,40px,'yxlogo.png');}
+
+ul.c-navTop-list{
+  .nav-top-child-box(auto);
+  list-style: none;
+  li{
+    display: inline-block;
+    width: 90px;
+    height: 65px;
+    line-height: 65px;
+    vertical-align: middle;
+    cursor: pointer;
+    &:hover{color:@color-3;}
+    a{
+      &:link{
+        color: #fff;}
+      &:visited{
+        color: #fff;}
+      &:hover{
+        color: @color-3;}
+      &:active{
+        color: @color-3;}
+    }
+  }
+}
+
+.c-nav-trigger,.c-nav-logo,ul.c-navTop-list{
+  &:after{
+    content: '';
+    display: inline-block;
+    width:0;
+    height: 100%;
+    vertical-align:middle;
+  }
+}
+
+.tool-right{width: auto;height: 65px;position: absolute;right: 20px;top: 0;}
+
+.c-sysName{
+  width: auto;
+  height: 100%;
+  display: table;
+  float: left;
+  text-align: center;
+  strong{
+    display: table-cell;
+    font-size: 1.2em;
+    width: 200px;
+    vertical-align: middle;}
+  &:before{
+    content: '';
+    display: table-cell;
+    vertical-align: middle;
+    width: 21px;
+    height: 65px;
+    background: url("../icon/sysIcon.png") no-repeat;
+  }}
+
+#siteTools{
+  width: 300px;
+  height: 100%;
+  display: table;
+  float:right;
+  text-align: center;
+  a{
+    color: #ffffff;
+    display: table-cell;
+    width: 80px;
+    height: 32px;
+    vertical-align: middle;
+    &:link{color: #ffffff;}
+    &:hover{
+      color: #e60012;}}
+  span{
+    display: table-cell;
+    width: 5px;
+    height: 32px;
+    vertical-align: middle;}
+  #loginControl{
+    height: 32px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #userCenter{
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    top: 6px;
+    a{
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+    }
+    a#userHeadPortrait{
+      display: inline-block;
+      width: 38px;
+      height: 38px;
+      border:1px solid @color-2;
+      border-radius: 50%;
+      background-size: 100%;
+    }
+  }
+}
+/******头部导航栏、工具栏区域END******/
+
+/******头部导航栏浮层START******/
+.nav-wrapper-arrow(){
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  position:absolute;
+  top: -16px;
+  background: url("@{icon-path}arrow_up.png") no-repeat;}
+.nwa-pos(@pos-left){
+  left:@pos-left;
+}
+.c-nav-wrapper{
+  width:auto;
+  max-width: 1200px;
+  font-size: 1.4em;
+  position: absolute;
+  z-index: 9999;
+  background-color: @color-1;
+  left: 265px;
+  box-shadow: 0 0 30px #434343;
+}
+.nav-inner-wrapper{
+  width:auto;
+  margin:0 auto;
+  position: relative;
+  display: none;
+  .wrapper-list{
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    width: 200px;
+    h3{
+      width: 100%;
+      font-size: 1.2em;
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid @color-2;
+    }
+    ul.media-list{
+      width: 100%;
+      list-style: none;
+      li{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+  &:before{
+    .nav-wrapper-arrow;
+  }
+  &:after{
+    content:'';
+    display: block;
+    clear: both;
+  }
+  &.adSourceWrapper{
+    &:before{
+      .nwa-pos(45px);
+    }
+  }
+  &.adPrice{
+    &:before{
+      .nwa-pos(135px);
+    }
+  }
+  &.paperManage{
+    &:before{
+      .nwa-pos(225px);
+    }
+  }
+  &.niw-active{
+    display: block;
+  }
+
+}
+/******头部导航栏浮层END******/
+
+/******左侧全站导航-分级菜单START******/
+@bordered:1px solid @color-2;
+.ln-level-other-box(@width:220px,@ml:5px){
+  width:@width;
+  margin-left: @ml;
+}
+#globalLeftNavBox{
+  width: 230px;
+  font-size:1.4em;
+  position: absolute;
+  z-index: 10;
+  top: 65px;
+  left: -250px;
+  transition: all 0.5s ease;
+  h3{
+    .ln-level-other-box;
+    height: 60px;
+    line-height: 60px;
+    border-bottom:@bordered;
+  }
+  .other-enter-box{
+    .ln-level-other-box;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: @bordered;
+    border-bottom: @bordered;
+    .enter{
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  .other-info{
+    .ln-level-other-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    p{
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  .ui-widget{
+    &.ui-widget-content {
+      width: 230px;
+      background: @color-1;
+      min-height: 300px;
+    }
+  }
+  .my-icon-option{
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+  }
+  &.slideOut{
+    left:0;
+  }
+}
+.ui-menu .ui-menu-item-wrapper{
+  padding:10px 10px 10px 30px !important;
+}
+/******左侧全站导航-分级菜单END******/
+
+/**********页脚START************/
+footer#footer {
+  width: 100%;
+  max-width: 1920px;
+  min-width: 1200px;
+  height: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: #ffffff;
+  .footer-content {
+    width: 1200px;
+    margin: 0 auto;
+    color: #000;
+    text-align: center;
+    .yx-logo {
+      text-align: center;
+      margin-bottom: 10px;
+      i.yx-logo-icon {
+        display: inline-block;
+        width: 135px;
+        height: 40px;
+        background-image: url("../icon/yxlogo.png");
+        text-indent: -100000px;
+        vertical-align: middle;
+      }
+    }
+    .copyright {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+/**********页脚END************/
+
+/****** @media screen START *************/
+@media screen and (max-width: 1400px){
+  .c-nav-inner{font-size: 1.4em;}
+  ul.c-navTop-list{
+    li{
+      width: 70px;
+    }}
+  .tool-right{
+    .c-sysName{
+      width: 202px;}
+    #siteTools{
+      width: 240px;
+    }
+  }
+}
+/****** @media screen END *************/
